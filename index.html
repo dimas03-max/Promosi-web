@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lirik Lagu - Dimas Project</title>
+  <style>
+    body {
+      background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 2.5em;
+      color: #00ffe0;
+      text-shadow: 0 0 10px #00ffe0, 0 0 30px #00ffe0;
+      margin-bottom: 40px;
+      animation: fadeInDown 1s ease;
+    }
+
+    h4 {
+      text-align: center;
+      color: #ff5c8a;
+      font-size: 1.5em;
+      margin-top: 50px;
+      text-shadow: 0 0 10px #ff5c8a, 0 0 20px #ff5c8a;
+      animation: fadeInUp 1s ease;
+    }
+
+    .lyrics {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffe0;
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.8;
+      font-size: 1.1em;
+      color: #e0e0e0;
+      transition: 0.3s ease;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .lyrics:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 25px #00ffe0;
+    }
+
+    .audio-player {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .glow-button {
+      background-color: transparent;
+      color: #00ffe0;
+      border: 2px solid #00ffe0;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      text-shadow: 0 0 10px #00ffe0;
+      box-shadow: 0 0 10px #00ffe0;
+      transition: 0.3s;
+      margin-bottom: 10px;
+    }
+
+    .glow-button:hover {
+      background-color: #00ffe020;
+      box-shadow: 0 0 20px #00ffe0;
+    }
+
+    audio {
+      width: 80%;
+      margin-top: 10px;
+      filter: drop-shadow(0 0 8px #00ffe0);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Website Lirik Dimas Project</h1>
+
+  <div class="audio-player">
+    <button class="glow-button" onclick="togglePlay('lagu1')">Putar / Pause Lagu 1</button><br>
+    <audio id="lagu1" src="Bulan dan Ksatria.mp3" controls></audio>
+  </div>
+
+  <h4>Bulan dan Ksatria</h4>
+  <div class="lyrics">
+    Jejak dendam perih meraksasa di angkasa<br>
+    Akan cinta yang besar dan terhalang durjana<br>
+    ...
+    Tangis, air matanya telah hilang
+  </div>
+
+  <div class="audio-player">
+    <button class="glow-button" onclick="togglePlay('lagu2')">Putar / Pause Lagu 2</button><br>
+    <audio id="lagu2" src="Duka last child.mp3" controls></audio>
+  </div>
+
+  <h4>Duka - Last Child</h4>
+  <div class="lyrics">
+    Kau membunuhku dengan kepedihan ini<br>
+    Kau hempaskanku kedalam retaknya hati<br>
+    ...
+    Pada indahnya duka dalam kenangan kita
+  </div>
+
+  <div class="audio-player">
+    <button class="glow-button" onclick="togglePlay('lagu3')">Putar / Pause Lagu 3</button><br>
+    <audio id="lagu3" src="I SET FIRE.mp3" controls></audio>
+  </div>
+
+  <h4>I Set Fire - Adele</h4>
+  <div class="lyrics">
+    I let it fall, my heart<br>
+    And as it fell, you rose to claim it<br>
+    ...
+    Let it burn
+  </div>
+
+  <script>
+    function togglePlay(id) {
+      const audio = document.getElementById(id);
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+
+</body>
+</html>
